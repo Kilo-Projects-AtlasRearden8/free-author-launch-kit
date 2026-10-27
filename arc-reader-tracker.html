@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARC Reader Tracker — Free Author Toolkit — Asdale Dynamics, LLC</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #ffffff;
+  }
+  .brand-bar {
+    border-bottom: 3px double #1a1a1a;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .kit-title { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #5a5a5a; margin: 0; }
+  h1 { font-size: 26px; margin: 0 0 4px 0; font-weight: normal; }
+  .credit { font-size: 12px; color: #5a5a5a; margin: 0; white-space: nowrap; }
+  .credit a { color: #1a1a1a; text-decoration: underline; }
+  .intro { font-size: 13.5px; color: #444; margin: 0 0 18px 0; max-width: 700px; }
+  .controls { display: none; }
+  .meta-row { display: flex; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+  .meta-field { flex: 1 1 200px; display: flex; flex-direction: column; gap: 4px; }
+  .meta-field label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: bold; }
+  .meta-field input { font: inherit; padding: 6px 8px; border: 1px solid #999; border-radius: 4px; }
+  h2 { font-size: 15px; margin: 20px 0 6px 0; padding: 5px 10px; background: #f2f2f2; border-left: 5px solid #1a1a1a; font-weight: normal; }
+  p.instruction { font-size: 12px; color: #5a5a5a; margin: 0 0 8px 0; font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+  th, td { border: 1px solid #999; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f2; font-weight: normal; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; color: #5a5a5a; }
+  tr.blank-row td { height: 42px; }
+  .add-row { margin-top: 10px; }
+  .notes {
+    border: 1px solid #999; border-radius: 6px; padding: 12px; min-height: 70px; font: inherit; resize: vertical;
+  }
+  .footnote { margin-top: 26px; padding-top: 12px; border-top: 1px solid #ccc; font-size: 11.5px; color: #5a5a5a; }
+  .footnote a { color: #1a1a1a; text-decoration: underline; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .controls { display: none !important; }
+    .no-print { display: none !important; }
+    .meta-field input { border: 0; border-bottom: 1px solid #1a1a1a; background: transparent; font-weight: normal; }
+    table { border: 0; }
+    td { border-bottom: 1px solid #aaa; border-right: 0; border-left: 0; border-top: 0; }
+    th { display: none; }
+    tr.blank-row td { height: 34px; border-bottom: 1px solid #aaa; }
+    .notes { border: 0; border-bottom: 1px solid #1a1a1a; background: transparent; }
+    a { color: #1a1a1a; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brand-bar">
+  <div>
+    <p class="kit-title">Free Author Launch Kit &bull; Asdale Dynamics, LLC</p>
+    <h1>ARC Reader Tracker</h1>
+  </div>
+  <p class="credit">© 2026 <a href="https://dylanasdale.github.io" target="_blank" rel="noopener">Asdale Dynamics, LLC</a> &mdash; free, no account needed</p>
+</div>
+
+<p class="intro">ARC = Advance Reader Copy. Track who you sent a free copy to, whether they read it, and where they posted a review. Keep it friendly &mdash; thank readers, never pressure them.</p>
+
+<div class="controls no-print" style="margin-bottom:14px;">
+  <button onclick="window.print()" style="padding:6px 12px; cursor:pointer;">Print this tracker</button>
+  <button onclick="addRow()" style="padding:6px 12px; cursor:pointer; margin-left:6px;">Add row</button>
+</div>
+
+<div class="meta-row">
+  <div class="meta-field"><label>Book title</label><input type="text"></div>
+  <div class="meta-field"><label>Tracking started</label><input type="text"></div>
+</div>
+
+<h2>ARC readers</h2>
+<p class="instruction">Print this page and fill in rows by hand, or add rows above and type them in first.</p>
+<table id="arc-table">
+  <thead>
+    <tr>
+      <th style="width:16%">Reader name</th>
+      <th style="width:16%">Email</th>
+      <th style="width:11%">Format (epub / pdf / mobi)</th>
+      <th style="width:11%">Date sent</th>
+      <th style="width:11%">Date read back</th>
+      <th style="width:9%">Review posted?</th>
+      <th style="width:12%">Where posted (Amazon, Goodreads, etc.)</th>
+      <th style="width:13%">Review link</th>
+      <th>Notes / thank-you sent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="blank-row"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<div class="meta-field" style="margin-top:14px;">
+  <label>Follow-up notes</label>
+  <textarea class="notes" placeholder="Who to thank, who to send the next book to, patterns you notice..."></textarea>
+</div>
+
+<script>
+function addRow(){
+  const t=document.getElementById('arc-table').querySelector('tbody');
+  const tr=t.insertRow();
+  tr.className='blank-row';
+  for(let i=0;i<9;i++){const c=tr.insertCell();c.innerHTML='';}
+}
+</script>
+
+<p class="footnote">Part of the free Author Launch Kit from <strong>Asdale Dynamics, LLC</strong>. Credit Asdale Dynamics, LLC. &copy; 2026 Asdale Dynamics, LLC &bull; <a href="https://dylanasdale.github.io" target="_blank" rel="noopener">dylanasdale.github.io</a></p>
+
+</body>
+</html>

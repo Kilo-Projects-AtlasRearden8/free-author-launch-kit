@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Launch Checklist — Free Author Toolkit — Asdale Dynamics, LLC</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #ffffff;
+  }
+  .brand-bar {
+    border-bottom: 3px double #1a1a1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .kit-title { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #5a5a5a; margin: 0; }
+  h1 { font-size: 26px; margin: 0 0 4px 0; font-weight: normal; }
+  .credit { font-size: 12px; color: #5a5a5a; margin: 0; white-space: nowrap; }
+  .credit a { color: #1a1a1a; text-decoration: underline; }
+  .intro {
+    font-size: 13.5px;
+    color: #444;
+    margin: 0 0 18px 0;
+    max-width: 700px;
+  }
+  .controls { display: none; }
+  .meta-row { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  .meta-field { flex: 1 1 220px; display: flex; flex-direction: column; gap: 4px; }
+  .meta-field label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: bold; }
+  .meta-field input { font: inherit; padding: 6px 8px; border: 1px solid #999; border-radius: 4px; }
+  h2 {
+    font-size: 16px;
+    margin: 22px 0 8px 0;
+    padding: 6px 10px;
+    background: #f2f2f2;
+    border-left: 5px solid #1a1a1a;
+    font-weight: normal;
+  }
+  ul.task-list { list-style: none; padding: 0; margin: 0 0 14px 0; }
+  li.task {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 13.5px;
+  }
+  li.task input[type="checkbox"] {
+    width: 16px; height: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #1a1a1a;
+  }
+  li.task .task-text { flex: 1; }
+  .notes {
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 12px;
+    min-height: 70px;
+    font: inherit;
+    resize: vertical;
+  }
+  .footnote {
+    margin-top: 26px;
+    padding-top: 12px;
+    border-top: 1px solid #ccc;
+    font-size: 11.5px;
+    color: #5a5a5a;
+  }
+  .footnote a { color: #1a1a1a; text-decoration: underline; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .controls { display: none !important; }
+    .no-print { display: none !important; }
+    li.task { border-bottom: 1px solid #aaa; page-break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+    .meta-field input { border: 0; border-bottom: 1px solid #1a1a1a; background: transparent; font-weight: normal; }
+    .notes { border: 0; border-bottom: 1px solid #1a1a1a; background: transparent; }
+    a { color: #1a1a1a; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brand-bar">
+  <div>
+    <p class="kit-title">Free Author Launch Kit &bull; Asdale Dynamics, LLC</p>
+    <h1>Book Launch Checklist</h1>
+  </div>
+  <p class="credit">© 2026 <a href="https://dylanasdale.github.io" target="_blank" rel="noopener">Asdale Dynamics, LLC</a> &mdash; free, no account needed</p>
+</div>
+
+<p class="intro">A plain-English, step-by-step checklist to take your book from "finished manuscript" to launch day and beyond. Print it out, check boxes off with a pen, and write notes in the margins. Nothing is collected or stored &mdash; this runs entirely in your browser.</p>
+
+<div class="controls no-print" style="margin-bottom:14px;">
+  <button onclick="window.print()" style="padding:6px 12px; cursor:pointer;">Print this checklist</button>
+  <button onclick="document.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=false)" style="padding:6px 12px; cursor:pointer; margin-left:6px;">Clear all checks</button>
+</div>
+
+<div class="meta-row">
+  <div class="meta-field"><label>Book title</label><input type="text"></div>
+  <div class="meta-field"><label>Subtitle</label><input type="text"></div>
+  <div class="meta-field"><label>Author name</label><input type="text"></div>
+  <div class="meta-field"><label>Launch date</label><input type="text"></div>
+  <div class="meta-field"><label>ISBN</label><input type="text"></div>
+  <div class="meta-field"><label>KDP ASIN / link</label><input type="text"></div>
+</div>
+
+<h2>Before launch &mdash; 4 to 6 weeks out</h2>
+<ul class="task-list">
+  <li class="task"><input type="checkbox"><span class="task-text">Manuscript is edited and proofread</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Cover design is finalized (ebook, print, and spine)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Book blurb and tagline are written</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">ARC reader list is built and copies are sent out</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Press release is drafted (see Press Release Template)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Social media posts are planned (see Social-Post Planner)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">KDP page is set up (title, description, categories, keywords)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Pre-order is enabled (if using one)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Email list is told the launch date</span></li>
+</ul>
+
+<h2>Launch week</h2>
+<ul class="task-list">
+  <li class="task"><input type="checkbox"><span class="task-text">Book is published and live on KDP</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Launch announcement goes out (email, social, press release)</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Buy links are shared and working</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">ARC readers are reminded to post reviews</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Reviews and sales are being logged (see Review Log)</span></li>
+</ul>
+
+<h2>After launch</h2>
+<ul class="task-list">
+  <li class="task"><input type="checkbox"><span class="task-text">Thank-you notes sent to ARC readers and early reviewers</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Review log is updated with new reviews and quotes</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">KDP categories and keywords are reviewed and adjusted</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Any paid promotion or ads are set up and tracked</span></li>
+  <li class="task"><input type="checkbox"><span class="task-text">Next promotion or price pulse is planned</span></li>
+</ul>
+
+<div class="meta-field" style="margin-top:6px;">
+  <label>Launch notes</label>
+  <textarea class="notes" placeholder="What worked, what to change next time..."></textarea>
+</div>
+
+<p class="footnote">Part of the free Author Launch Kit from <strong>Asdale Dynamics, LLC</strong>. More tools: launch checklist, press release, ARC reader tracker, review log, and social-post planner. Credit Asdale Dynamics, LLC. &copy; 2026 Asdale Dynamics, LLC &bull; <a href="https://dylanasdale.github.io" target="_blank" rel="noopener">dylanasdale.github.io</a></p>
+
+</body>
+</html>
